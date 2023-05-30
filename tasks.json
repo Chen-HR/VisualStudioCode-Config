@@ -92,9 +92,7 @@
     {
       "label": "Start File",
       "type": "shell",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "options": {"cwd": "${fileDirname}"},
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -108,23 +106,14 @@
       },
       "command": "",
       "args": [
-        "&",
-        "D:\\Studio\\Programming\\Project\\Script\\Task\\Task-Infomation.ps1",
-        "Open File",
-        "Open the file using your computer`s default software.",
-        ";",
-        "&",
-        "D:\\Studio\\Programming\\Project\\Script\\Task\\File-Open.ps1",
-        "'${file}'",
-        ";"
+        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\Task-Infomation.ps1","Open File","Open the file using your computer`s default software.",";",
+        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\File-Open.ps1","'${file}'",";"
       ]
     },
     {
       "label": "Start Anaconda-PowerShell",
       "type": "shell",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "options": {"cwd": "${fileDirname}"},
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -138,22 +127,14 @@
       },
       "command": "",
       "args": [
-        "&",
-        "D:\\Studio\\Programming\\Project\\Script\\Task\\Task-Infomation.ps1",
-        "Open File",
-        "Open the file using your computer`s default software.",
-        ";",
-        "&",
-        "D:\\Studio\\Programming\\Project\\Script\\Task\\Start-Anaconda-PowerShell.ps1",
-        ";"
+        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\Task-Infomation.ps1","Open File","Open the file using your computer`s default software.",";",
+        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\Start-Anaconda-PowerShell.ps1",";"
       ]
     },
     {
       "label": "Start VisualStudioCode-FolderDirectory",
       "type": "shell",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "options": {"cwd": "${fileDirname}"},
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -167,28 +148,17 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "Start VisualStudioCode-FolderDirectory",
-        ";",
-        "Write-Host",
-        "  Time:",
-        "$(Get-Date",
-        "-Format",
-        "'yyyy/MM/dd(K)HH:mm:ss.ffff')",
-        ";",
-        "Write-Host",
-        "  VisualStudioCode-FolderDirectory: ${fileDirname}",
-        ";",
-        "code",
-        "."
+        // "D:\\Studio\\Programming\\Project\\Script\\Task\\Task-Infomation.ps1.ps1",";",
+        "Write-Host","Start VisualStudioCode-FolderDirectory",";",
+        "Write-Host","  Time:","$(Get-Date","-Format","'yyyy/MM/dd(K)HH:mm:ss.ffff')",";",
+        "Write-Host","  VisualStudioCode-FolderDirectory: ${fileDirname}",";",
+        "code","."
       ]
     },
     {
       "label": "Start VisualStudioCode-WorkSpace",
       "type": "shell",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "options": {"cwd": "${fileDirname}"},
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -202,29 +172,16 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "Start VisualStudioCode-WorkSpace",
-        ";",
-        "Write-Host",
-        "  Time:",
-        "$(Get-Date",
-        "-Format",
-        "'yyyy/MM/dd(K)HH:mm:ss.ffff')",
-        ";",
-        "Write-Host",
-        "  VisualStudioCode-WorkSpace: $((Get-ChildItem *.code-workspace).ToString())\n",
-        ";",
-        "pwsh",
-        "-Command",
-        "\"$((Get-ChildItem *.code-workspace).ToString())\""
+        "Write-Host","Start VisualStudioCode-WorkSpace",";",
+        "Write-Host","  Time:","$(Get-Date","-Format","'yyyy/MM/dd(K)HH:mm:ss.ffff')",";",
+        "Write-Host","  VisualStudioCode-WorkSpace: $((Get-ChildItem *.code-workspace).ToString())\n",";",
+        "pwsh","-Command","\"$((Get-ChildItem *.code-workspace).ToString())\""
       ]
     },
     {
       "label": "Start VisualStudio-Project",
       "type": "shell",
-      "options": {
-        "cwd": "${fileDirname}\\.."
-      },
+      "options": {"cwd": "${fileDirname}\\.."},
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -238,29 +195,16 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "Start VisualStudio-Project",
-        ";",
-        "Write-Host",
-        "  Time:",
-        "$(Get-Date",
-        "-Format",
-        "'yyyy/MM/dd(K)HH:mm:ss.ffff')",
-        ";",
-        "Write-Host",
-        "  VisualStudio-Project: $((Get-ChildItem *.sln).ToString())\n",
-        ";",
-        "pwsh",
-        "-Command",
-        "\"$((Get-ChildItem *.sln).ToString())\""
+        "Write-Host","Start VisualStudio-Project",";",
+        "Write-Host","  Time:","$(Get-Date","-Format","'yyyy/MM/dd(K)HH:mm:ss.ffff')",";",
+        "Write-Host","  VisualStudio-Project: $((Get-ChildItem *.sln).ToString())\n",";",
+        "pwsh","-Command","\"$((Get-ChildItem *.sln).ToString())\""
       ]
     },
     {
       "label": "Clone VisualStudioCode-WorkSpace-Config",
       "type": "shell",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "options": {"cwd": "${fileDirname}"},
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -274,67 +218,25 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "Clone VisualStudioCode-WorkSpace-Config",
-        ";",
-        "Write-Host",
-        "  Time:",
-        "$(Get-Date",
-        "-Format",
-        "'yyyy/MM/dd(K)HH:mm:ss.ffff')",
-        ";",
-        "Write-Host",
-        "  SourceFolder: ${workspaceFolder}",
-        ";",
-        "Write-Host",
-        "  TargetFolder: ${fileDirname}",
-        ";",
-        "Write-Host",
-        "",
-        ";",
-        "'# Create this file and run at '",
-        "|",
-        "Out-File",
-        "-FilePath",
-        "\"${fileDirname}\\VisualStudioCode-WorkSpace-Config-Cloner.ps1\"",
-        "-NoNewline",
-        ";",
-        "\"$(Get-Date",
-        "-Format",
-        "'yyyy/MM/dd(K)HH:mm:ss.ffff')\"",
-        "|",
-        "Out-File",
-        "-FilePath",
-        "\"${fileDirname}\\VisualStudioCode-WorkSpace-Config-Cloner.ps1\"",
-        "-Append",
-        ";",
+        "Write-Host","Clone VisualStudioCode-WorkSpace-Config",";",
+        "Write-Host","  Time:","$(Get-Date","-Format","'yyyy/MM/dd(K)HH:mm:ss.ffff')",";",
+        "Write-Host","  SourceFolder: ${workspaceFolder}",";",
+        "Write-Host","  TargetFolder: ${fileDirname}",";",
+        "Write-Host","",";",
+        "'# Create this file and run at '","|","Out-File","-FilePath","\"${fileDirname}\\VisualStudioCode-WorkSpace-Config-Cloner.ps1\"","-NoNewline",";",
+        "\"$(Get-Date","-Format","'yyyy/MM/dd(K)HH:mm:ss.ffff')\"","|","Out-File","-FilePath","\"${fileDirname}\\VisualStudioCode-WorkSpace-Config-Cloner.ps1\"","-Append",";",
         "Copy-Item -Path \\\"${workspaceFolder}\\.vscode\\\" -Destination \\\"${fileDirname}\\\" -Recurse ; ",
-        "|",
-        "Out-File",
-        "-FilePath",
-        "\"${fileDirname}\\VisualStudioCode-WorkSpace-Config-Cloner.ps1\"",
-        "-Append",
-        ";",
+        "|","Out-File","-FilePath","\"${fileDirname}\\VisualStudioCode-WorkSpace-Config-Cloner.ps1\"","-Append",";",
         "Move-Item -Path \\\"${fileDirname}\\.vscode\\*.code-workspace\\\" -Destination \\\"${fileDirname}\\.vscode\\$(($Project=\\\"${fileDirname}\\\").Split(\\\"\\\\\\\")[-1]).code-workspace\\\" ;",
-        "|",
-        "Out-File",
-        "-FilePath",
-        "\"${fileDirname}\\VisualStudioCode-WorkSpace-Config-Cloner.ps1\"",
-        "-Append",
-        ";",
-        "Get-Content",
-        "\"${fileDirname}\\VisualStudioCode-WorkSpace-Config-Cloner.ps1\"",
-        ";",
-        "\"${fileDirname}\\VisualStudioCode-WorkSpace-Config-Cloner.ps1\"",
-        ";"
+        "|","Out-File","-FilePath","\"${fileDirname}\\VisualStudioCode-WorkSpace-Config-Cloner.ps1\"","-Append",";",
+        "Get-Content","\"${fileDirname}\\VisualStudioCode-WorkSpace-Config-Cloner.ps1\"",";",
+        "\"${fileDirname}\\VisualStudioCode-WorkSpace-Config-Cloner.ps1\"",";"
       ]
     },
     {
       "label": "File: save as base64",
       "type": "shell",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "options": {"cwd": "${fileDirname}"},
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -348,38 +250,17 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "File: save as base64",
-        ";",
-        "Write-Host",
-        "  Time:",
-        "$(Get-Date",
-        "-Format",
-        "'yyyy/MM/dd(K)HH:mm:ss.ffff')",
-        ";",
-        "Write-Host",
-        "  File: ${file}",
-        ";",
-        "Write-Host",
-        "",
-        ";",
-        "[System.Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($(Get-Content",
-        "\"${file}\")))",
-        "|",
-        "Set-content",
-        "\"${file}.$(Get-Date",
-        "-Format",
-        "\"",
-        "${input:TimeFormat}",
-        "\").b64\""
+        "Write-Host","File: save as base64",";",
+        "Write-Host","  Time:","$(Get-Date","-Format","'yyyy/MM/dd(K)HH:mm:ss.ffff')",";",
+        "Write-Host","  File: ${file}",";",
+        "Write-Host","",";",
+        "[System.Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($(Get-Content","\"${file}\")))","|","Set-content","\"${file}.$(Get-Date","-Format","\"","${input:TimeFormat}","\").b64\""
       ]
     },
     {
       "label": "File: view with encoding",
       "type": "shell",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "options": {"cwd": "${fileDirname}"},
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -393,36 +274,18 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "File: view with encoding",
-        ";",
-        "Write-Host",
-        "  Time:",
-        "$(Get-Date",
-        "-Format",
-        "'yyyy/MM/dd(K)HH:mm:ss.ffff')",
-        ";",
-        "Write-Host",
-        "  File: ${file}",
-        ";",
-        "Write-Host",
-        "  TargetEncoding: ${input:TargetEncoding}",
-        ";",
-        "Write-Host",
-        "",
-        ";",
-        "Get-Content",
-        "-Encoding",
-        "${input:TargetEncoding}",
-        "\"${file}\""
+        "Write-Host","File: view with encoding",";",
+        "Write-Host","  Time:","$(Get-Date","-Format","'yyyy/MM/dd(K)HH:mm:ss.ffff')",";",
+        "Write-Host","  File: ${file}",";",
+        "Write-Host","  TargetEncoding: ${input:TargetEncoding}",";",
+        "Write-Host","",";",
+        "Get-Content","-Encoding","${input:TargetEncoding}","\"${file}\""
       ]
     },
     {
       "label": "File: save with encoding",
       "type": "shell",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "options": {"cwd": "${fileDirname}"},
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -436,57 +299,21 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "File: save with encoding",
-        ";",
-        "Write-Host",
-        "  Time:",
-        "$(Get-Date",
-        "-Format",
-        "'yyyy/MM/dd(K)HH:mm:ss.ffff')",
-        ";",
-        "Write-Host",
-        "  File: ${file}",
-        ";",
-        "Write-Host",
-        "  SourceEncoding: ${input:SourceEncoding}",
-        ";",
-        "Write-Host",
-        "  TargetEncoding: ${input:TargetEncoding}",
-        ";",
-        "Write-Host",
-        "",
-        ";",
-        "Get-Content",
-        "-Encoding",
-        "${input:SourceEncoding}",
-        "\"${file}\"",
-        "|",
-        "Set-Content",
-        "-Encoding",
-        "${input:SourceEncoding}",
-        "\"${file}.${input:SourceEncoding}\"",
-        ";",
-        "Get-Content",
-        "-Encoding",
-        "${input:SourceEncoding}",
-        "\"${file}.${input:SourceEncoding}\"",
-        "|",
-        "Set-Content",
-        "-Encoding",
-        "${input:TargetEncoding}",
-        "\"${file}\"",
-        ";",
-        "Remove-Item",
-        "\".\\${file}.${input:SourceEncoding}\""
+        "Write-Host","File: save with encoding",";",
+        "Write-Host","  Time:","$(Get-Date","-Format","'yyyy/MM/dd(K)HH:mm:ss.ffff')",";",
+        "Write-Host","  File: ${file}",";",
+        "Write-Host","  SourceEncoding: ${input:SourceEncoding}",";",
+        "Write-Host","  TargetEncoding: ${input:TargetEncoding}",";",
+        "Write-Host","",";",
+        "Get-Content","-Encoding","${input:SourceEncoding}","\"${file}\"","|","Set-Content","-Encoding","${input:SourceEncoding}","\"${file}.${input:SourceEncoding}\"",";",
+        "Get-Content","-Encoding","${input:SourceEncoding}","\"${file}.${input:SourceEncoding}\"","|","Set-Content","-Encoding","${input:TargetEncoding}","\"${file}\"",";",
+        "Remove-Item","\".\\${file}.${input:SourceEncoding}\""
       ]
     },
     {
       "label": "File: save Version (Time, Version, Status)",
       "type": "shell",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "options": {"cwd": "${fileDirname}"},
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -500,48 +327,20 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "File: save Version (Time, Version, Status)",
-        ";",
-        "Write-Host",
-        "  Time:",
-        "$(Get-Date",
-        "-Format",
-        "'yyyy/MM/dd(K)HH:mm:ss.ffff')",
-        ";",
-        "Write-Host",
-        "  File: ${file}",
-        ";",
-        "Write-Host",
-        "  Version: ${input:VersionNumber}",
-        ";",
-        "Write-Host",
-        "  Status: ${input:Status}",
-        ";",
-        "Write-Host",
-        "  Split: ${input:Split}",
-        ";",
-        "Write-Host",
-        "",
-        ";",
-        "Get-Content",
-        "\"${file}\"",
-        "|",
-        "Set-Content",
-        "\".\\${fileBasenameNoExtension}${input:Split}$(Get-Date",
-        "-Format",
-        "\"",
-        "${input:TimeFormat}",
-        "\")${input:Split}${input:VersionNumber}${input:Split}${input:Status}${fileExtname}\"",
-        ";"
+        "Write-Host","File: save Version (Time, Version, Status)",";",
+        "Write-Host","  Time:","$(Get-Date","-Format","'yyyy/MM/dd(K)HH:mm:ss.ffff')",";",
+        "Write-Host","  File: ${file}",";",
+        "Write-Host","  Version: ${input:VersionNumber}",";",
+        "Write-Host","  Status: ${input:Status}",";",
+        "Write-Host","  Split: ${input:Split}",";",
+        "Write-Host","",";",
+        "Get-Content","\"${file}\"","|","Set-Content","\".\\${fileBasenameNoExtension}${input:Split}$(Get-Date","-Format","\"","${input:TimeFormat}","\")${input:Split}${input:VersionNumber}${input:Split}${input:Status}${fileExtname}\"",";"
       ]
     },
     {
       "label": "File: save Version (Time, Version)",
       "type": "shell",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "options": {"cwd": "${fileDirname}"},
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -555,52 +354,20 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "File: save Version (Time, Version)",
-        ";",
-        "Write-Host",
-        "  Time:",
-        "$(Get-Date",
-        "-Format",
-        "'yyyy/MM/dd(K)HH:mm:ss.ffff')",
-        ";",
-        "Write-Host",
-        "  File: ${file}",
-        ";",
-        "Write-Host",
-        "  Version: ${input:VersionNumber}",
-        ";",
-        "Write-Host",
-        "  Split: ${input:Split}",
-        ";",
-        "Write-Host",
-        "",
-        ";",
-        "Write-Host",
-        "\".\\${fileBasenameNoExtension}${input:Split}$(Get-Date",
-        "-Format",
-        "\"",
-        "${input:TimeFormat}",
-        "\")${input:Split}${input:VersionNumber}${fileExtname}\"",
-        ";",
-        "Get-Content",
-        "\"${file}\"",
-        "|",
-        "Set-Content",
-        "\".\\${fileBasenameNoExtension}${input:Split}$(Get-Date",
-        "-Format",
-        "\"",
-        "${input:TimeFormat}",
-        "\")${input:Split}${input:VersionNumber}${fileExtname}\"",
-        ";"
+        "Write-Host","File: save Version (Time, Version)",";",
+        "Write-Host","  Time:","$(Get-Date","-Format","'yyyy/MM/dd(K)HH:mm:ss.ffff')",";",
+        "Write-Host","  File: ${file}",";",
+        "Write-Host","  Version: ${input:VersionNumber}",";",
+        "Write-Host","  Split: ${input:Split}",";",
+        "Write-Host","",";",
+        "Write-Host","\".\\${fileBasenameNoExtension}${input:Split}$(Get-Date","-Format","\"","${input:TimeFormat}","\")${input:Split}${input:VersionNumber}${fileExtname}\"",";",
+        "Get-Content","\"${file}\"","|","Set-Content","\".\\${fileBasenameNoExtension}${input:Split}$(Get-Date","-Format","\"","${input:TimeFormat}","\")${input:Split}${input:VersionNumber}${fileExtname}\"",";"
       ]
     },
     {
       "label": "File.Editor: Indentation to Spaces",
       "type": "shell",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "options": {"cwd": "${fileDirname}"},
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -614,32 +381,17 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "File.Editor: Indentation to Spaces",
-        ";",
-        "Write-Host",
-        "  Time:",
-        "$(Get-Date",
-        "-Format",
-        "'yyyy/MM/dd(K)HH:mm:ss.ffff')",
-        ";",
-        "Write-Host",
-        "  File: ${file}",
-        ";",
-        "Write-Host",
-        "  Action: ${input:EditorActionIndentationToSpaces}",
-        ";",
-        "Write-Host",
-        "",
-        ";"
+        "Write-Host","File.Editor: Indentation to Spaces",";",
+        "Write-Host","  Time:","$(Get-Date","-Format","'yyyy/MM/dd(K)HH:mm:ss.ffff')",";",
+        "Write-Host","  File: ${file}",";",
+        "Write-Host","  Action: ${input:EditorActionIndentationToSpaces}",";",
+        "Write-Host","",";"
       ]
     },
     {
       "label": "File.Editor: Indent Using Spaces",
       "type": "shell",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "options": {"cwd": "${fileDirname}"},
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -653,32 +405,17 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "File.Editor: Indent Using Spaces",
-        ";",
-        "Write-Host",
-        "  Time:",
-        "$(Get-Date",
-        "-Format",
-        "'yyyy/MM/dd(K)HH:mm:ss.ffff')",
-        ";",
-        "Write-Host",
-        "  File: ${file}",
-        ";",
-        "Write-Host",
-        "  Action: ${input:EditorActionIndentUsingSpaces}",
-        ";",
-        "Write-Host",
-        "",
-        ";"
+        "Write-Host","File.Editor: Indent Using Spaces",";",
+        "Write-Host","  Time:","$(Get-Date","-Format","'yyyy/MM/dd(K)HH:mm:ss.ffff')",";",
+        "Write-Host","  File: ${file}",";",
+        "Write-Host","  Action: ${input:EditorActionIndentUsingSpaces}",";",
+        "Write-Host","",";"
       ]
     },
     {
       "label": "File.Editor: Format Document",
       "type": "shell",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "options": {"cwd": "${fileDirname}"},
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -692,32 +429,17 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "File.Editor: Format Document",
-        ";",
-        "Write-Host",
-        "  Time:",
-        "$(Get-Date",
-        "-Format",
-        "'yyyy/MM/dd(K)HH:mm:ss.ffff')",
-        ";",
-        "Write-Host",
-        "  File: ${file}",
-        ";",
-        "Write-Host",
-        "  Action: ${input:EditorActionFormatDocument}",
-        ";",
-        "Write-Host",
-        "",
-        ";"
+        "Write-Host","File.Editor: Format Document",";",
+        "Write-Host","  Time:","$(Get-Date","-Format","'yyyy/MM/dd(K)HH:mm:ss.ffff')",";",
+        "Write-Host","  File: ${file}",";",
+        "Write-Host","  Action: ${input:EditorActionFormatDocument}",";",
+        "Write-Host","",";"
       ]
     },
     {
       "label": "File.Editor: Format Document with Indent-Spaces",
       "type": "shell",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "options": {"cwd": "${fileDirname}"},
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -731,39 +453,20 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "File.Editor: Format Document with Indent-Spaces",
-        ";",
-        "Write-Host",
-        "  Time:",
-        "$(Get-Date",
-        "-Format",
-        "'yyyy/MM/dd(K)HH:mm:ss.ffff')",
-        ";",
-        "Write-Host",
-        "  File: ${file}",
-        ";",
-        "Write-Host",
-        "  Action: ${input:EditorActionIndentationToSpaces}, ${input:EditorActionIndentUsingSpaces}, ${input:EditorActionFormatDocument}",
-        ";",
-        "Write-Host",
-        "",
-        ";"
+        "Write-Host","File.Editor: Format Document with Indent-Spaces",";",
+        "Write-Host","  Time:","$(Get-Date","-Format","'yyyy/MM/dd(K)HH:mm:ss.ffff')",";",
+        "Write-Host","  File: ${file}",";",
+        "Write-Host","  Action: ${input:EditorActionIndentationToSpaces}, ${input:EditorActionIndentUsingSpaces}, ${input:EditorActionFormatDocument}",";",
+        "Write-Host","",";"
       ]
     },
     {
       "label": "Expand C++ With GNU-G++",
       "type": "shell",
-      "dependsOn": [
-        ""
-      ],
+      "dependsOn": [""],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
-      "problemMatcher": [
-        "$gcc"
-      ],
+      "options": {"cwd": "${fileDirname}"},
+      "problemMatcher": ["$gcc"],
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -777,31 +480,17 @@
       },
       "command": "",
       "args": [
-        "&",
-        "D:\\Studio\\Programming\\Project\\Script\\Task\\Task-Infomation.ps1",
-        "Expand C++ With GNU-G++",
-        ";",
-        "&",
-        "D:\\Studio\\Programming\\Project\\Script\\Task\\GNU-G++.ps1",
-        "Preprocess",
-        "'${fileBasenameNoExtension}'",
-        "${fileDirname}",
-        ";"
+        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\Task-Infomation.ps1","Expand C++ With GNU-G++",";",
+        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\GNU-G++.ps1","Preprocess","'${fileBasenameNoExtension}'","${fileDirname}",";"
       ]
     },
     {
       "label": "Compile C++ With GNU-G++",
       "type": "shell",
-      "dependsOn": [
-        ""
-      ],
+      "dependsOn": [""],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
-      "problemMatcher": [
-        "$gcc"
-      ],
+      "options": {"cwd": "${fileDirname}"},
+      "problemMatcher": ["$gcc"],
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -815,31 +504,17 @@
       },
       "command": "",
       "args": [
-        "&",
-        "D:\\Studio\\Programming\\Project\\Script\\Task\\Task-Infomation.ps1",
-        "Compile C++ With GNU-G++",
-        ";",
-        "&",
-        "D:\\Studio\\Programming\\Project\\Script\\Task\\GNU-G++.ps1",
-        "Compile",
-        "'${fileBasenameNoExtension}'",
-        "${fileDirname}",
-        ";"
+        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\Task-Infomation.ps1","Compile C++ With GNU-G++",";",
+        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\GNU-G++.ps1","Compile","'${fileBasenameNoExtension}'","${fileDirname}",";"
       ]
     },
     {
       "label": "Test C++ With GNU-G++",
       "type": "shell",
-      "dependsOn": [
-        ""
-      ],
+      "dependsOn": [""],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
-      "problemMatcher": [
-        "$gcc"
-      ],
+      "options": {"cwd": "${fileDirname}"},
+      "problemMatcher": ["$gcc"],
       "group": "test",
       "presentation": {
         "group": "Task",
@@ -853,31 +528,17 @@
       },
       "command": "",
       "args": [
-        "&",
-        "D:\\Studio\\Programming\\Project\\Script\\Task\\Task-Infomation.ps1",
-        "Compile C++ With GNU-G++",
-        ";",
-        "&",
-        "D:\\Studio\\Programming\\Project\\Script\\Task\\GNU-G++.ps1",
-        "Test",
-        "'${fileBasenameNoExtension}'",
-        "${fileDirname}",
-        ";"
+        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\Task-Infomation.ps1","Compile C++ With GNU-G++",";",
+        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\GNU-G++.ps1","Test","'${fileBasenameNoExtension}'","${fileDirname}",";"
       ]
     },
     {
       "label": "Test C++ With GNU-G++ (Flush)",
       "type": "shell",
-      "dependsOn": [
-        ""
-      ],
+      "dependsOn": [""],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
-      "problemMatcher": [
-        "$gcc"
-      ],
+      "options": {"cwd": "${fileDirname}"},
+      "problemMatcher": ["$gcc"],
       "group": "test",
       "presentation": {
         "group": "Task",
@@ -891,31 +552,17 @@
       },
       "command": "",
       "args": [
-        "&",
-        "D:\\Studio\\Programming\\Project\\Script\\Task\\Task-Infomation.ps1",
-        "Compile C++ With GNU-G++",
-        ";",
-        "&",
-        "D:\\Studio\\Programming\\Project\\Script\\Task\\GNU-G++.ps1",
-        "Test-Flush",
-        "'${fileBasenameNoExtension}'",
-        "${fileDirname}",
-        ";"
+        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\Task-Infomation.ps1","Compile C++ With GNU-G++",";",
+        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\GNU-G++.ps1","Test-Flush","'${fileBasenameNoExtension}'","${fileDirname}",";"
       ]
     },
     {
       "label": "C++: Build CurrentFile",
       "type": "shell",
-      "dependsOn": [
-        ""
-      ],
+      "dependsOn": [""],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
-      "problemMatcher": [
-        "$gcc"
-      ],
+      "options": {"cwd": "${fileDirname}"},
+      "problemMatcher": ["$gcc"],
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -929,154 +576,29 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "C++: Build CurrentFile",
-        ";",
-        "Write-Host",
-        "  Time:",
-        "$(Get-Date",
-        "-Format",
-        "'yyyy/MM/dd(K)HH:mm:ss.ffff')",
-        ";",
-        "Write-Host",
-        "  File: ${file}",
-        ";",
-        "if",
-        "(",
-        "Test-Path",
-        "\".\\${fileBasenameNoExtension}.Compile.Options.txt\"",
-        ")",
-        "{",
-        "Write-Host",
-        "  Compile.Options:",
-        "$(Get-Content",
-        "'.\\${fileBasenameNoExtension}.Compile.Options.txt')",
-        "}",
-        ";",
-        "Write-Host",
-        "  Compile:",
-        "'${config:C_Cpp_Config.cppCompilerPath}'",
-        "\".\\$(('${file}').Split('\\')[-1])\"",
-        "'-o'",
-        "\".\\${fileBasenameNoExtension}.exe\"",
-        "-NoNewline",
-        ";",
-        "if",
-        "(",
-        "Test-Path",
-        "\".\\${fileBasenameNoExtension}.Compile.Options.txt\"",
-        ")",
-        "{",
-        "Write-Host",
-        "$(Get-Content",
-        "\".\\${fileBasenameNoExtension}.Compile.Options.txt\")",
-        "}",
-        ";",
-        "Write-Host",
-        "",
-        ";",
-        "if",
-        "(",
-        "Test-Path",
-        "\".\\${fileBasenameNoExtension}.exe\"",
-        ")",
-        "{",
-        "Write-Host",
-        "Remove-Item: \"${fileDirname}\\${fileBasenameNoExtension}.exe\"",
-        ";",
-        "Remove-Item",
-        "\"${fileDirname}\\${fileBasenameNoExtension}.exe\"",
-        ";",
-        "Write-Host",
-        "",
-        ";",
-        "}",
-        ";",
-        "# Create this file and run at ",
-        "|",
-        "Out-File",
-        "-FilePath",
-        ".\\${fileBasenameNoExtension}.Compile.ps1",
-        "-NoNewline",
-        ";",
-        "\"$(Get-Date",
-        "-Format",
-        "'yyyy/MM/dd(K)HH:mm:ss.ffff')\"",
-        "|",
-        "Out-File",
-        "-FilePath",
-        ".\\${fileBasenameNoExtension}.Compile.ps1",
-        "-Append",
-        ";",
-        "${config:C_Cpp_Config.cppCompilerPath} ",
-        "+",
-        "\"\\\".\\$(('${file}').Split('\\')[-1])\\\"\"",
-        "+",
-        " -o ",
-        "+",
-        "'.\\${fileBasenameNoExtension}.exe'\"",
-        "|",
-        "Out-File",
-        "-FilePath",
-        ".\\${fileBasenameNoExtension}.Compile.ps1",
-        "-Append",
-        "-NoNewline",
-        ";",
-        "if",
-        "(",
-        "Test-Path",
-        "\".\\${fileBasenameNoExtension}.Compile.Options.txt\"",
-        ")",
-        "{",
-        "$(Get-Content(\\\".\\${fileBasenameNoExtension}.Compile.Options.txt\\\"))",
-        "|",
-        "Out-File",
-        "-FilePath",
-        ".\\${fileBasenameNoExtension}.Compile.ps1",
-        "-Append",
-        "-NoNewline",
-        ";",
-        "}",
-        ";",
-        "Copy-Item",
-        "-Path",
-        ".\\${fileBasenameNoExtension}.Compile.ps1",
-        "-Destination",
-        ".\\${fileBasenameNoExtension}.Build.ps1",
-        ";",
-        "if",
-        "(",
-        "Test-Path",
-        "\".\\${fileBasenameNoExtension}.Build.ps1\"",
-        ")",
-        "{",
-        "Write-Host",
-        "Execute-Script: \"${fileDirname}\\${fileBasenameNoExtension}.Build.ps1\"",
-        ";",
-        "Get-Content('.\\${fileBasenameNoExtension}.Build.ps1')",
-        ";",
-        "Write-Host",
-        "",
-        ";",
-        ".\\${fileBasenameNoExtension}.Build.ps1",
-        ";",
-        "}",
-        ";"
+        "Write-Host","C++: Build CurrentFile",";",
+        "Write-Host","  Time:","$(Get-Date","-Format","'yyyy/MM/dd(K)HH:mm:ss.ffff')",";",
+        "Write-Host","  File: ${file}",";",
+        "if","(","Test-Path","\".\\${fileBasenameNoExtension}.Compile.Options.txt\"",")","{","Write-Host","  Compile.Options:","$(Get-Content","'.\\${fileBasenameNoExtension}.Compile.Options.txt')","}",";",
+        "Write-Host","  Compile:","'${config:C_Cpp_Config.cppCompilerPath}'","\".\\$(('${file}').Split('\\')[-1])\"","'-o'","\".\\${fileBasenameNoExtension}.exe\"","-NoNewline",";",
+        "if","(","Test-Path","\".\\${fileBasenameNoExtension}.Compile.Options.txt\"",")","{","Write-Host","$(Get-Content","\".\\${fileBasenameNoExtension}.Compile.Options.txt\")","}",";",
+        "Write-Host","",";",
+        "if","(","Test-Path","\".\\${fileBasenameNoExtension}.exe\"",")","{","Write-Host","Remove-Item: \"${fileDirname}\\${fileBasenameNoExtension}.exe\"",";","Remove-Item","\"${fileDirname}\\${fileBasenameNoExtension}.exe\"",";","Write-Host","",";","}",";",
+        "# Create this file and run at ","|","Out-File","-FilePath",".\\${fileBasenameNoExtension}.Compile.ps1","-NoNewline",";",
+        "\"$(Get-Date","-Format","'yyyy/MM/dd(K)HH:mm:ss.ffff')\"","|","Out-File","-FilePath",".\\${fileBasenameNoExtension}.Compile.ps1","-Append",";",
+        "${config:C_Cpp_Config.cppCompilerPath} ","+","\"\\\".\\$(('${file}').Split('\\')[-1])\\\"\"","+"," -o ","+","'.\\${fileBasenameNoExtension}.exe'\"","|","Out-File","-FilePath",".\\${fileBasenameNoExtension}.Compile.ps1","-Append","-NoNewline",";",
+        "if","(","Test-Path","\".\\${fileBasenameNoExtension}.Compile.Options.txt\"",")","{","$(Get-Content(\\\".\\${fileBasenameNoExtension}.Compile.Options.txt\\\"))","|","Out-File","-FilePath",".\\${fileBasenameNoExtension}.Compile.ps1","-Append","-NoNewline",";","}",";",
+        "Copy-Item","-Path",".\\${fileBasenameNoExtension}.Compile.ps1","-Destination",".\\${fileBasenameNoExtension}.Build.ps1",";",
+        "if","(","Test-Path","\".\\${fileBasenameNoExtension}.Build.ps1\"",")","{","Write-Host","Execute-Script: \"${fileDirname}\\${fileBasenameNoExtension}.Build.ps1\"",";","Get-Content('.\\${fileBasenameNoExtension}.Build.ps1')",";","Write-Host","",";",".\\${fileBasenameNoExtension}.Build.ps1",";","}",";"
       ]
     },
     {
       "label": "C++: Execute CurrentFile",
       "type": "shell",
-      "dependsOn": [
-        "C++: Build CurrentFile"
-      ],
+      "dependsOn": ["C++: Build CurrentFile"],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
-      "problemMatcher": [
-        "$gcc"
-      ],
+      "options": {"cwd": "${fileDirname}"},
+      "problemMatcher": ["$gcc"],
       "group": {
         "kind": "test",
         "isDefault": true
@@ -1093,159 +615,30 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "C++: Execute CurrentFile",
-        ";",
-        "Write-Host",
-        "  Time:",
-        "$(Get-Date",
-        "-Format",
-        "'yyyy/MM/dd(K)HH:mm:ss.ffff')",
-        ";",
-        "Write-Host",
-        "  File: ${file}",
-        ";",
-        "if",
-        "(",
-        "Test-Path",
-        "\".\\${fileBasenameNoExtension}.exe\"",
-        ")",
-        "{",
-        "Write-Host",
-        "  Execute.File: \"${fileDirname}\\${fileBasenameNoExtension}.Execute.ps1\"",
-        ";",
-        "}",
-        "else",
-        "{",
-        "Write-Host",
-        "  Error: Execute.File is not exist.",
-        ";",
-        "exit",
-        ";",
-        "}",
-        ";",
-        "if",
-        "(",
-        "Test-Path",
-        "\".\\${fileBasenameNoExtension}.Execute.Parameters.txt\"",
-        ")",
-        "{",
-        "Write-Host",
-        "  Execute.Parameters:",
-        "$(Get-Content",
-        "\".\\${fileBasenameNoExtension}.Execute.Parameters.txt\")",
-        "}",
-        ";",
-        "Write-Host",
-        "  Execute:",
-        "'.\\${fileBasenameNoExtension}.exe'",
-        "-NoNewline",
-        ";",
-        "if",
-        "(",
-        "Test-Path",
-        "\".\\${fileBasenameNoExtension}.Execute.Parameters.txt\"",
-        ")",
-        "{",
-        "Write-Host",
-        "$(Get-Content",
-        "\".\\${fileBasenameNoExtension}.Execute.Parameters.txt\")",
-        "}",
-        ";",
-        "Write-Host",
-        "",
-        ";",
-        "# Create this file and run at ",
-        "|",
-        "Out-File",
-        "-FilePath",
-        "'.\\${fileBasenameNoExtension}.Execute.ps1'",
-        "-NoNewline",
-        ";",
-        "$(Get-Date",
-        "-Format",
-        "'yyyy/MM/dd(K)HH:mm:ss.ffff')",
-        "|",
-        "Out-File",
-        "-FilePath",
-        "'.\\${fileBasenameNoExtension}.Execute.ps1'",
-        "-Append",
-        ";",
-        "if",
-        "(",
-        "Test-Path",
-        "\".\\${fileBasenameNoExtension}.Execute.Input.txt\"",
-        ")",
-        "{",
-        "\\\"Get-Content('.\\${fileBasenameNoExtension}.Execute.Input.txt')\\\"",
-        "+",
-        " | ",
-        "|",
-        "Out-File",
-        "-FilePath",
-        "'.\\${fileBasenameNoExtension}.Execute.ps1'",
-        "-Append",
-        "-NoNewline",
-        ";",
-        "}",
-        ";",
-        "'.\\${fileBasenameNoExtension}.exe'",
-        "|",
-        "Out-File",
-        "-FilePath",
-        ".\\${fileBasenameNoExtension}.Execute.ps1",
-        "-Append",
-        "-NoNewline",
-        ";",
-        "if",
-        "(",
-        "Test-Path",
-        "\".\\${fileBasenameNoExtension}.Execute.Parameters.txt\"",
-        ")",
-        "{",
-        "$(Get-Content(\\\".\\${fileBasenameNoExtension}.Execute.Parameters.txt\\\"))",
-        "|",
-        "Out-File",
-        "-FilePath",
-        "'.\\${fileBasenameNoExtension}.Execute.ps1'",
-        "-Append",
-        "-NoNewline",
-        ";",
-        "}",
-        ";",
-        "if",
-        "(",
-        "Test-Path",
-        "\".\\${fileBasenameNoExtension}.Execute.ps1\"",
-        ")",
-        "{",
-        "Write-Host",
-        "Execute-Script: \"${fileDirname}\\${fileBasenameNoExtension}.Execute.ps1\"",
-        ";",
-        "Get-Content('.\\${fileBasenameNoExtension}.Execute.ps1')",
-        ";",
-        "Write-Host",
-        "",
-        ";",
-        ".\\${fileBasenameNoExtension}.Execute.ps1",
-        ";",
-        "}",
-        ";"
+        "Write-Host","C++: Execute CurrentFile",";",
+        "Write-Host","  Time:","$(Get-Date","-Format","'yyyy/MM/dd(K)HH:mm:ss.ffff')",";",
+        "Write-Host","  File: ${file}",";",
+        "if","(","Test-Path","\".\\${fileBasenameNoExtension}.exe\"",")","{","Write-Host","  Execute.File: \"${fileDirname}\\${fileBasenameNoExtension}.Execute.ps1\"",";","}",
+        "else","{","Write-Host","  Error: Execute.File is not exist.",";","exit",";","}",";",
+        "if","(","Test-Path","\".\\${fileBasenameNoExtension}.Execute.Parameters.txt\"",")","{","Write-Host","  Execute.Parameters:","$(Get-Content","\".\\${fileBasenameNoExtension}.Execute.Parameters.txt\")","}",";",
+        "Write-Host","  Execute:","'.\\${fileBasenameNoExtension}.exe'","-NoNewline",";",
+        "if","(","Test-Path","\".\\${fileBasenameNoExtension}.Execute.Parameters.txt\"",")","{","Write-Host","$(Get-Content","\".\\${fileBasenameNoExtension}.Execute.Parameters.txt\")","}",";",
+        "Write-Host","",";",
+        "# Create this file and run at ","|","Out-File","-FilePath","'.\\${fileBasenameNoExtension}.Execute.ps1'","-NoNewline",";",
+        "$(Get-Date","-Format","'yyyy/MM/dd(K)HH:mm:ss.ffff')","|","Out-File","-FilePath","'.\\${fileBasenameNoExtension}.Execute.ps1'","-Append",";",
+        "if","(","Test-Path","\".\\${fileBasenameNoExtension}.Execute.Input.txt\"",")","{","\\\"Get-Content('.\\${fileBasenameNoExtension}.Execute.Input.txt')\\\"","+"," | ","|","Out-File","-FilePath","'.\\${fileBasenameNoExtension}.Execute.ps1'","-Append","-NoNewline",";","}",";",
+        "'.\\${fileBasenameNoExtension}.exe'","|","Out-File","-FilePath",".\\${fileBasenameNoExtension}.Execute.ps1","-Append","-NoNewline",";",
+        "if","(","Test-Path","\".\\${fileBasenameNoExtension}.Execute.Parameters.txt\"",")","{","$(Get-Content(\\\".\\${fileBasenameNoExtension}.Execute.Parameters.txt\\\"))","|","Out-File","-FilePath","'.\\${fileBasenameNoExtension}.Execute.ps1'","-Append","-NoNewline",";","}",";",
+        "if","(","Test-Path","\".\\${fileBasenameNoExtension}.Execute.ps1\"",")","{","Write-Host","Execute-Script: \"${fileDirname}\\${fileBasenameNoExtension}.Execute.ps1\"",";","Get-Content('.\\${fileBasenameNoExtension}.Execute.ps1')",";","Write-Host","",";",".\\${fileBasenameNoExtension}.Execute.ps1",";","}",";"
       ]
     },
     {
       "label": "Build Cpp (.cpp to .exe)",
       "type": "shell",
-      "dependsOn": [
-        ""
-      ],
+      "dependsOn": [""],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
-      "problemMatcher": [
-        "$gcc"
-      ],
+      "options": {"cwd": "${fileDirname}"},
+      "problemMatcher": ["$gcc"],
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -1259,28 +652,16 @@
       },
       "command": "",
       "args": [
-        "g++",
-        "${file}",
-        "-o",
-        ".\\${fileBasenameNoExtension}.exe",
-        "-g",
-        "-Wall",
-        "-std=c++17"
+        "g++","${file}","-o",".\\${fileBasenameNoExtension}.exe","-g","-Wall","-std=c++17"
       ]
     },
     {
       "label": "Build Cpp (main.cpp to main.exe)",
       "type": "shell",
-      "dependsOn": [
-        ""
-      ],
+      "dependsOn": [""],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
-      "problemMatcher": [
-        "$gcc"
-      ],
+      "options": {"cwd": "${fileDirname}"},
+      "problemMatcher": ["$gcc"],
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -1294,28 +675,16 @@
       },
       "command": "",
       "args": [
-        "g++",
-        "${fileDirname}\\main.cpp",
-        "-o",
-        ".\\main.exe",
-        "-g",
-        "-Wall",
-        "-std=c++17"
+        "g++","${fileDirname}\\main.cpp","-o",".\\main.exe","-g","-Wall","-std=c++17"
       ]
     },
     {
       "label": "Build Cpp (.cpp to .exe) (staticLib)",
       "type": "shell",
-      "dependsOn": [
-        ""
-      ],
+      "dependsOn": [""],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
-      "problemMatcher": [
-        "$gcc"
-      ],
+      "options": {"cwd": "${fileDirname}"},
+      "problemMatcher": ["$gcc"],
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -1329,30 +698,16 @@
       },
       "command": "",
       "args": [
-        "g++",
-        ".\\${fileBasename}",
-        "-o",
-        ".\\${fileBasenameNoExtension}.exe",
-        "-g",
-        "-Wall",
-        "-std=c++17",
-        "-static-libgcc",
-        "-static-libstdc++"
+        "g++",".\\${fileBasename}","-o",".\\${fileBasenameNoExtension}.exe","-g","-Wall","-std=c++17","-static-libgcc","-static-libstdc++"
       ]
     },
     {
       "label": "Test Cpp",
       "type": "shell",
-      "dependsOn": [
-        "Build Cpp (.cpp to .exe)"
-      ],
+      "dependsOn": ["Build Cpp (.cpp to .exe)"],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
-      "problemMatcher": [
-        "$gcc"
-      ],
+      "options": {"cwd": "${fileDirname}"},
+      "problemMatcher": ["$gcc"],
       "group": {
         "kind": "test",
         "isDefault": true
@@ -1369,10 +724,8 @@
       },
       "command": "",
       "args": [
-        "\".\\${fileBasenameNoExtension}.exe\"",
-        ";",
-        "Remove-Item",
-        "\".\\${fileBasenameNoExtension}.exe\""
+        "\".\\${fileBasenameNoExtension}.exe\"",";",
+        "Remove-Item","\".\\${fileBasenameNoExtension}.exe\""
       ]
     },
     {
@@ -1380,12 +733,8 @@
       "type": "shell",
       "dependsOn": [],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
-      "problemMatcher": [
-        "$gcc"
-      ],
+      "options": {"cwd": "${fileDirname}"},
+      "problemMatcher": ["$gcc"],
       "group": {
         "kind": "test",
         "isDefault": true
@@ -1402,33 +751,18 @@
       },
       "command": "",
       "args": [
-        "${config:C_Cpp_Config.cppCompilerPath}",
-        "${file}",
-        "-o",
-        ".\\${fileBasenameNoExtension}.exe",
-        "-g",
-        "-Wall",
-        "-std=c++17",
-        ";",
-        "\".\\${fileBasenameNoExtension}.exe\"",
-        ";",
-        "Remove-Item",
-        "\".\\${fileBasenameNoExtension}.exe\""
+        "${config:C_Cpp_Config.cppCompilerPath}","${file}","-o",".\\${fileBasenameNoExtension}.exe","-g","-Wall","-std=c++17",";",
+        "\".\\${fileBasenameNoExtension}.exe\"",";",
+        "Remove-Item","\".\\${fileBasenameNoExtension}.exe\""
       ]
     },
     {
       "label": "Test Cpp main",
       "type": "shell",
-      "dependsOn": [
-        "Build Cpp (main.cpp to main.exe)"
-      ],
+      "dependsOn": ["Build Cpp (main.cpp to main.exe)"],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
-      "problemMatcher": [
-        "$gcc"
-      ],
+      "options": {"cwd": "${fileDirname}"},
+      "problemMatcher": ["$gcc"],
       "group": {
         "kind": "test",
         "isDefault": true
@@ -1445,25 +779,17 @@
       },
       "command": "",
       "args": [
-        "\".\\main.exe\"",
-        ";",
-        "Remove-Item",
-        "\".\\main.exe\""
+        "\".\\main.exe\"",";",
+        "Remove-Item","\".\\main.exe\""
       ]
     },
     {
       "label": "Test Cpp main with file",
       "type": "shell",
-      "dependsOn": [
-        "Build Cpp (main.cpp to main.exe)"
-      ],
+      "dependsOn": ["Build Cpp (main.cpp to main.exe)"],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
-      "problemMatcher": [
-        "$gcc"
-      ],
+      "options": {"cwd": "${fileDirname}"},
+      "problemMatcher": ["$gcc"],
       "group": {
         "kind": "test",
         "isDefault": true
@@ -1480,28 +806,17 @@
       },
       "command": "",
       "args": [
-        "Get-Content",
-        "\".\\\\input1.txt\"",
-        "|",
-        ".\\main.exe",
-        ";",
-        "Remove-Item",
-        "\".\\main.exe\""
+        "Get-Content","\".\\\\input1.txt\"","|",".\\main.exe",";",
+        "Remove-Item","\".\\main.exe\""
       ]
     },
     {
       "label": "Test Cpp with file",
       "type": "shell",
-      "dependsOn": [
-        "Build Cpp (.cpp to .exe)"
-      ],
+      "dependsOn": ["Build Cpp (.cpp to .exe)"],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
-      "problemMatcher": [
-        "$gcc"
-      ],
+      "options": {"cwd": "${fileDirname}"},
+      "problemMatcher": ["$gcc"],
       "group": {
         "kind": "test",
         "isDefault": true
@@ -1518,28 +833,17 @@
       },
       "command": "",
       "args": [
-        "Get-Content",
-        "\".\\\\${fileBasenameNoExtension}.input\"",
-        "|",
-        "\".\\${fileBasenameNoExtension}.exe\"",
-        ";",
-        "Remove-Item",
-        "\"${fileDirname}\\${fileBasenameNoExtension}.exe\""
+        "Get-Content","\".\\\\${fileBasenameNoExtension}.input\"","|","\".\\${fileBasenameNoExtension}.exe\"",";",
+        "Remove-Item","\"${fileDirname}\\${fileBasenameNoExtension}.exe\""
       ]
     },
     {
       "label": "Test Cpp with file to file",
       "type": "shell",
-      "dependsOn": [
-        "Build Cpp (.cpp to .exe)"
-      ],
+      "dependsOn": ["Build Cpp (.cpp to .exe)"],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
-      "problemMatcher": [
-        "$gcc"
-      ],
+      "options": {"cwd": "${fileDirname}"},
+      "problemMatcher": ["$gcc"],
       "group": {
         "kind": "test",
         "isDefault": true
@@ -1556,27 +860,16 @@
       },
       "command": "",
       "args": [
-        "Get-Content",
-        "\".\\\\${fileBasenameNoExtension}.input\"",
-        "|",
-        "\".\\${fileBasenameNoExtension}.exe\"",
-        ">",
-        "\".\\\\${fileBasenameNoExtension}.output\"",
-        ";",
-        "Remove-Item",
-        "\"${fileDirname}\\${fileBasenameNoExtension}.exe\""
+        "Get-Content","\".\\\\${fileBasenameNoExtension}.input\"","|","\".\\${fileBasenameNoExtension}.exe\"",">","\".\\\\${fileBasenameNoExtension}.output\"",";",
+        "Remove-Item","\"${fileDirname}\\${fileBasenameNoExtension}.exe\""
       ]
     },
     {
       "label": "Build Java",
       "type": "shell",
-      "dependsOn": [
-        ""
-      ],
+      "dependsOn": [""],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "options": {"cwd": "${fileDirname}"},
       "problemMatcher": [],
       "group": "build",
       "presentation": {
@@ -1591,20 +884,15 @@
       },
       "command": "",
       "args": [
-        "javac",
-        "${file}"
+        "javac","${file}"
       ]
     },
     {
       "label": "Test Java",
       "type": "shell",
-      "dependsOn": [
-        "Build Java"
-      ],
+      "dependsOn": ["Build Java"],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "options": {"cwd": "${fileDirname}"},
       "problemMatcher": [],
       "group": {
         "kind": "test",
@@ -1622,23 +910,15 @@
       },
       "command": "",
       "args": [
-        "java",
-        "${fileBasenameNoExtension}",
-        ";",
-        "Remove-Item",
-        "${fileBasenameNoExtension}*.class"
+        "java","${fileBasenameNoExtension}",";","Remove-Item","${fileBasenameNoExtension}*.class"
       ]
     },
     {
       "label": "Build Python",
       "type": "shell",
-      "dependsOn": [
-        ""
-      ],
+      "dependsOn": [""],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "options": {"cwd": "${fileDirname}"},
       "problemMatcher": [],
       "group": "build",
       "presentation": {
@@ -1653,46 +933,20 @@
       },
       "command": "",
       "args": [
-        "pyinstaller",
-        ".\\${fileBasename}",
-        "-F",
-        ";",
-        "if",
-        "(",
-        "Test-Path",
-        ".\\${fileBasenameNoExtension}.exe",
-        ")",
-        "{",
-        "Remove-Item",
-        ".\\${fileBasenameNoExtension}.exe",
-        "}",
-        ";",
-        "Move-Item",
-        ".\\dist\\${fileBasenameNoExtension}.exe",
-        ".\\${fileBasenameNoExtension}.exe",
-        ";",
-        "Remove-Item",
-        ".\\build",
-        "-Recurse",
-        ";",
-        "Remove-Item",
-        ".\\dist",
-        "-Recurse",
-        ";",
-        "Remove-Item",
-        ".\\${fileBasenameNoExtension}.spec"
+        "pyinstaller",".\\${fileBasename}","-F",";",
+        "if","(","Test-Path",".\\${fileBasenameNoExtension}.exe",")","{","Remove-Item",".\\${fileBasenameNoExtension}.exe","}",";",
+        "Move-Item",".\\dist\\${fileBasenameNoExtension}.exe",".\\${fileBasenameNoExtension}.exe",";",
+        "Remove-Item",".\\build","-Recurse",";",
+        "Remove-Item",".\\dist","-Recurse",";",
+        "Remove-Item",".\\${fileBasenameNoExtension}.spec"
       ]
     },
     {
       "label": "Test Python",
       "type": "shell",
-      "dependsOn": [
-        ""
-      ],
+      "dependsOn": [""],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "options": {"cwd": "${fileDirname}"},
       "problemMatcher": [],
       "group": {
         "kind": "test",
@@ -1710,23 +964,16 @@
       },
       "command": "",
       "args": [
-        "python",
-        ".\\${fileBasename}"
+        "python",".\\${fileBasename}"
       ]
     },
     {
       "label": "Build JavaScript (notSupported)",
       "type": "shell",
-      "dependsOn": [
-        ""
-      ],
+      "dependsOn": [""],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
-      "problemMatcher": [
-        "$jshint"
-      ],
+      "options": {"cwd": "${fileDirname}"},
+      "problemMatcher": ["$jshint"],
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -1740,23 +987,16 @@
       },
       "command": "",
       "args": [
-        "node",
-        ".\\${fileBasename}"
+        "node",".\\${fileBasename}"
       ]
     },
     {
       "label": "Test JavaScript",
       "type": "shell",
-      "dependsOn": [
-        ""
-      ],
+      "dependsOn": [""],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
-      "problemMatcher": [
-        "$jshint"
-      ],
+      "options": {"cwd": "${fileDirname}"},
+      "problemMatcher": ["$jshint"],
       "group": {
         "kind": "test",
         "isDefault": true
@@ -1773,23 +1013,16 @@
       },
       "command": "",
       "args": [
-        "node",
-        ".\\${fileBasename}"
+        "node",".\\${fileBasename}"
       ]
     },
     {
       "label": "Build TypeScript (.ts to .js)",
       "type": "shell",
-      "dependsOn": [
-        ""
-      ],
+      "dependsOn": [""],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
-      "problemMatcher": [
-        "$tsc"
-      ],
+      "options": {"cwd": "${fileDirname}"},
+      "problemMatcher": ["$tsc"],
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -1803,20 +1036,14 @@
       },
       "command": "",
       "args": [
-        "tsc",
-        "${file}",
-        ";",
-        "tsc",
-        "${file}",
-        "--sourcemap"
+        "tsc","${file}",";",
+        "tsc","${file}","--sourcemap"
       ]
     },
     {
       "label": "Test TypeScript",
       "type": "shell",
-      "problemMatcher": [
-        "$tsc"
-      ],
+      "problemMatcher": ["$tsc"],
       "group": {
         "kind": "test",
         "isDefault": true
@@ -1839,13 +1066,9 @@
     {
       "label": "Build Powershell (notSupported)",
       "type": "shell",
-      "dependsOn": [
-        ""
-      ],
+      "dependsOn": [""],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "options": {"cwd": "${fileDirname}"},
       "problemMatcher": [],
       "group": "build",
       "presentation": {
@@ -1866,13 +1089,9 @@
     {
       "label": "Test Powershell",
       "type": "shell",
-      "dependsOn": [
-        ""
-      ],
+      "dependsOn": [""],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "options": {"cwd": "${fileDirname}"},
       "problemMatcher": [],
       "group": {
         "kind": "test",
@@ -1896,13 +1115,9 @@
     {
       "label": "Build MASM_x86 (.asm to .lst, .obj, .exe)",
       "type": "shell",
-      "dependsOn": [
-        ""
-      ],
+      "dependsOn": [""],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "options": {"cwd": "${fileDirname}"},
       "problemMatcher": [],
       "group": "build",
       "presentation": {
@@ -1917,36 +1132,16 @@
       },
       "command": "",
       "args": [
-        "C:\\masm32\\bin\\ml.exe",
-        "-c",
-        "-coff",
-        "-Fl",
-        "-nologo",
-        "-I'C:\\masm32\\include'",
-        "-I'C:\\Irvine\\'",
-        ".\\${fileBasenameNoExtension}.asm",
-        ";",
-        "C:\\masm32\\bin\\link.exe",
-        "-out:'.\\${fileBasenameNoExtension}.exe'",
-        "-nologo",
-        "-verbose",
-        "-subsystem:console",
-        "-libpath:'C:\\masm32\\lib'",
-        "-libpath:'C:\\Irvine'",
-        ".\\${fileBasenameNoExtension}.obj",
-        ";"
+        "C:\\masm32\\bin\\ml.exe","-c","-coff","-Fl","-nologo","-I'C:\\masm32\\include'","-I'C:\\Irvine\\'",".\\${fileBasenameNoExtension}.asm",";",
+        "C:\\masm32\\bin\\link.exe","-out:'.\\${fileBasenameNoExtension}.exe'","-nologo","-verbose","-subsystem:console","-libpath:'C:\\masm32\\lib'","-libpath:'C:\\Irvine'",".\\${fileBasenameNoExtension}.obj",";"
       ]
     },
     {
       "label": "Build MASM_x86 (.asm to .exe)",
       "type": "shell",
-      "dependsOn": [
-        "Build MASM_x86 (.asm to .lst, .obj, .exe)"
-      ],
+      "dependsOn": ["Build MASM_x86 (.asm to .lst, .obj, .exe)"],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "options": {"cwd": "${fileDirname}"},
       "problemMatcher": [],
       "group": "build",
       "presentation": {
@@ -1961,24 +1156,16 @@
       },
       "command": "",
       "args": [
-        "Remove-Item",
-        ".\\${fileBasenameNoExtension}.lst",
-        ";",
-        "Remove-Item",
-        ".\\${fileBasenameNoExtension}.obj",
-        ";"
+        "Remove-Item",".\\${fileBasenameNoExtension}.lst",";",
+        "Remove-Item",".\\${fileBasenameNoExtension}.obj",";"
       ]
     },
     {
       "label": "Test MASM_x86",
       "type": "shell",
-      "dependsOn": [
-        "Build MASM_x86 (.asm to .lst, .obj, .exe)"
-      ],
+      "dependsOn": ["Build MASM_x86 (.asm to .lst, .obj, .exe)"],
       "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "options": {"cwd": "${fileDirname}"},
       "problemMatcher": [],
       "group": {
         "kind": "test",
@@ -1996,28 +1183,18 @@
       },
       "command": "",
       "args": [
-        ".\\${fileBasenameNoExtension}.exe",
-        ";",
-        "Remove-Item",
-        ".\\${fileBasenameNoExtension}.lst",
-        ";",
-        "Remove-Item",
-        ".\\${fileBasenameNoExtension}.obj",
-        ";",
-        "Remove-Item",
-        ".\\${fileBasenameNoExtension}.exe",
-        ";"
+        ".\\${fileBasenameNoExtension}.exe",";",
+        "Remove-Item",".\\${fileBasenameNoExtension}.lst",";",
+        "Remove-Item",".\\${fileBasenameNoExtension}.obj",";",
+        "Remove-Item",".\\${fileBasenameNoExtension}.exe",";"
       ]
     },
     {
       "label": "npm install",
+      //  "detail": "npm install",
       "type": "shell",
-      "runOptions": {
-        "instanceLimit": 4
-      },
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "runOptions": {"instanceLimit": 4},
+      "options": {"cwd": "${fileDirname}"},
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -2031,22 +1208,16 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "Floder: ${fileDirname}\nCommand: ${input:NodejsPackageManager} install",
-        ";",
-        "${input:NodejsPackageManager}",
-        "install"
+        "Write-Host","Floder: ${fileDirname}\nCommand: ${input:NodejsPackageManager} install",";",
+        "${input:NodejsPackageManager}","install"
       ]
     },
     {
       "label": "npm add module",
+      //  "detail": "npm add ${module}",
       "type": "shell",
-      "runOptions": {
-        "instanceLimit": 4
-      },
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "runOptions": {"instanceLimit": 4},
+      "options": {"cwd": "${fileDirname}"},
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -2060,23 +1231,16 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "Floder: ${fileDirname}\nCommand: ${input:NodejsPackageManager} add ${input:NodejsModuleName}",
-        ";",
-        "${input:NodejsPackageManager}",
-        "add",
-        "${input:NodejsModuleName}"
+        "Write-Host","Floder: ${fileDirname}\nCommand: ${input:NodejsPackageManager} add ${input:NodejsModuleName}",";",
+        "${input:NodejsPackageManager}","add","${input:NodejsModuleName}"
       ]
     },
     {
       "label": "npm update module",
+      //  "detail": "npm update ${module}",
       "type": "shell",
-      "runOptions": {
-        "instanceLimit": 4
-      },
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "runOptions": {"instanceLimit": 4},
+      "options": {"cwd": "${fileDirname}"},
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -2090,23 +1254,16 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "Floder: ${fileDirname}\nCommand: ${input:NodejsPackageManager} update ${input:NodejsModuleName}",
-        ";",
-        "${input:NodejsPackageManager}",
-        "update",
-        "${input:NodejsModuleName}"
+        "Write-Host","Floder: ${fileDirname}\nCommand: ${input:NodejsPackageManager} update ${input:NodejsModuleName}",";",
+        "${input:NodejsPackageManager}","update","${input:NodejsModuleName}"
       ]
     },
     {
       "label": "npm run script",
+      //  "detail": "npm run ${script}",
       "type": "shell",
-      "runOptions": {
-        "instanceLimit": 4
-      },
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "runOptions": {"instanceLimit": 4},
+      "options": {"cwd": "${fileDirname}"},
       "group": {
         "kind": "test",
         "isDefault": true
@@ -2123,23 +1280,16 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "Floder: ${fileDirname}\nCommand: ${input:NodejsPackageManager} run ${input:NodejsPackageManagerScript}",
-        ";",
-        "${input:NodejsPackageManager}",
-        "run",
-        "${input:NodejsPackageManagerScript}"
+        "Write-Host","Floder: ${fileDirname}\nCommand: ${input:NodejsPackageManager} run ${input:NodejsPackageManagerScript}",";",
+        "${input:NodejsPackageManager}","run","${input:NodejsPackageManagerScript}"
       ]
     },
     {
       "label": "npm run build",
+      //  "detail": "npm run build",
       "type": "shell",
-      "runOptions": {
-        "instanceLimit": 4
-      },
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "runOptions": {"instanceLimit": 4},
+      "options": {"cwd": "${fileDirname}"},
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -2153,23 +1303,16 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "Floder: ${fileDirname}\nCommand: ${input:NodejsPackageManager} run build",
-        ";",
-        "${input:NodejsPackageManager}",
-        "run",
-        "build"
+        "Write-Host","Floder: ${fileDirname}\nCommand: ${input:NodejsPackageManager} run build",";",
+        "${input:NodejsPackageManager}","run","build"
       ]
     },
     {
       "label": "npm run start",
+      //  "detail": "npm run start",
       "type": "shell",
-      "runOptions": {
-        "instanceLimit": 4
-      },
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "runOptions": {"instanceLimit": 4},
+      "options": {"cwd": "${fileDirname}"},
       "group": {
         "kind": "test",
         "isDefault": true
@@ -2186,23 +1329,16 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "Floder: ${fileDirname}\nCommand: ${input:NodejsPackageManager} run start",
-        ";",
-        "${input:NodejsPackageManager}",
-        "run",
-        "start"
+        "Write-Host","Floder: ${fileDirname}\nCommand: ${input:NodejsPackageManager} run start",";",
+        "${input:NodejsPackageManager}","run","start"
       ]
     },
     {
       "label": "npm run dev",
+      //  "detail": "npm run dev",
       "type": "shell",
-      "runOptions": {
-        "instanceLimit": 4
-      },
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "runOptions": {"instanceLimit": 4},
+      "options": {"cwd": "${fileDirname}"},
       "group": {
         "kind": "test",
         "isDefault": true
@@ -2219,23 +1355,16 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "Floder: ${fileDirname}\nCommand: ${input:NodejsPackageManager} run dev",
-        ";",
-        "${input:NodejsPackageManager}",
-        "run",
-        "dev"
+        "Write-Host","Floder: ${fileDirname}\nCommand: ${input:NodejsPackageManager} run dev",";",
+        "${input:NodejsPackageManager}","run","dev"
       ]
     },
     {
       "label": "npm run vite",
+      //  "detail": "vite",
       "type": "shell",
-      "runOptions": {
-        "instanceLimit": 4
-      },
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "runOptions": {"instanceLimit": 4},
+      "options": {"cwd": "${fileDirname}"},
       "group": {
         "kind": "test",
         "isDefault": true
@@ -2252,23 +1381,16 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "Floder: ${fileDirname}\nCommand: ${input:NodejsPackageManager} run vite",
-        ";",
-        "${input:NodejsPackageManager}",
-        "run",
-        "vite"
+        "Write-Host","Floder: ${fileDirname}\nCommand: ${input:NodejsPackageManager} run vite",";",
+        "${input:NodejsPackageManager}","run","vite"
       ]
     },
     {
       "label": "npm run vite-host",
+      //  "detail": "vite --host",
       "type": "shell",
-      "runOptions": {
-        "instanceLimit": 4
-      },
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "runOptions": {"instanceLimit": 4},
+      "options": {"cwd": "${fileDirname}"},
       "group": {
         "kind": "test",
         "isDefault": true
@@ -2285,23 +1407,16 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "Floder: ${fileDirname}\nCommand: ${input:NodejsPackageManager} run vite-host",
-        ";",
-        "${input:NodejsPackageManager}",
-        "run",
-        "vite-host"
+        "Write-Host","Floder: ${fileDirname}\nCommand: ${input:NodejsPackageManager} run vite-host",";",
+        "${input:NodejsPackageManager}","run","vite-host"
       ]
     },
     {
       "label": "npm run vite-build",
+      //  "detail": "vite build",
       "type": "shell",
-      "runOptions": {
-        "instanceLimit": 4
-      },
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "runOptions": {"instanceLimit": 4},
+      "options": {"cwd": "${fileDirname}"},
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -2315,23 +1430,16 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "Floder: ${fileDirname}\nCommand: ${input:NodejsPackageManager} run vite-build",
-        ";",
-        "${input:NodejsPackageManager}",
-        "run",
-        "vite-build"
+        "Write-Host","Floder: ${fileDirname}\nCommand: ${input:NodejsPackageManager} run vite-build",";",
+        "${input:NodejsPackageManager}","run","vite-build"
       ]
     },
     {
       "label": "npm run vite-preview",
+      //  "detail": "vite preview",
       "type": "shell",
-      "runOptions": {
-        "instanceLimit": 4
-      },
-      "options": {
-        "cwd": "${fileDirname}"
-      },
+      "runOptions": {"instanceLimit": 4},
+      "options": {"cwd": "${fileDirname}"},
       "group": {
         "kind": "test",
         "isDefault": true
@@ -2348,36 +1456,9 @@
       },
       "command": "",
       "args": [
-        "Write-Host",
-        "Floder: ${fileDirname}\nCommand: ${input:NodejsPackageManager} run vite-preview",
-        ";",
-        "${input:NodejsPackageManager}",
-        "run",
-        "vite-preview"
+        "Write-Host","Floder: ${fileDirname}\nCommand: ${input:NodejsPackageManager} run vite-preview",";",
+        "${input:NodejsPackageManager}","run","vite-preview"
       ]
-    },
-    {
-      "type": "cppbuild",
-      "label": "C/C++: g++.exe 建置使用中檔案",
-      "command": "C:/ProgramFiles/GCC/bin/g++.exe",
-      "args": [
-        "-fdiagnostics-color=always",
-        "-g",
-        "${file}",
-        "-o",
-        "${fileDirname}\\${fileBasenameNoExtension}.exe"
-      ],
-      "options": {
-        "cwd": "C:/ProgramFiles/GCC/bin"
-      },
-      "problemMatcher": [
-        "$gcc"
-      ],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "detail": "偵錯工具產生的工作。"
     }
   ]
 }
