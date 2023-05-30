@@ -106,7 +106,7 @@
       },
       "command": "",
       "args": [
-        "&","Task-Infomation","Open File","Open the file using your computer`s default software.",";",
+        "&","Task-Infomation","Infomation","Open File","Open the file using your computer`s default software.",";",
         "&","File-Open","'${file}'",";"
       ]
     },
@@ -127,12 +127,12 @@
       },
       "command": "",
       "args": [
-        "&","Task-Infomation","Open File","Open the file using your computer`s default software.",";",
+        "&","Task-Infomation","Infomation","Open File","Open the file using your computer`s default software.",";",
         "&","Start-Anaconda-PowerShell",";"
       ]
     },
     {
-      "label": "Start VisualStudioCode-FolderDirectory",
+      "label": "Start VisualStudioCode-Directory",
       "type": "shell",
       "options": {"cwd": "${fileDirname}"},
       "group": "build",
@@ -148,11 +148,8 @@
       },
       "command": "",
       "args": [
-        // "Task-Infomation",";",
-        "Write-Host","Start VisualStudioCode-FolderDirectory",";",
-        "Write-Host","  Time:","$(Get-Date","-Format","'yyyy/MM/dd(K)HH:mm:ss.ffff')",";",
-        "Write-Host","  VisualStudioCode-FolderDirectory: ${fileDirname}",";",
-        "code","."
+        "&","Task-Infomation","Key-Value","Open VisualStudioCode-Directory","Open the Directory using VisualStudioCode.","Directory","${fileDirname}",";",
+        "code","${fileDirname}"
       ]
     },
     {
@@ -172,16 +169,14 @@
       },
       "command": "",
       "args": [
-        "Write-Host","Start VisualStudioCode-WorkSpace",";",
-        "Write-Host","  Time:","$(Get-Date","-Format","'yyyy/MM/dd(K)HH:mm:ss.ffff')",";",
-        "Write-Host","  VisualStudioCode-WorkSpace: $((Get-ChildItem *.code-workspace).ToString())\n",";",
-        "pwsh","-Command","\"$((Get-ChildItem *.code-workspace).ToString())\""
+        "&","Task-Infomation","Key-Value","Open VisualStudioCode-WorkSpace","Open the WorkSpace using VisualStudioCode.","WorkSpace","$((Get-ChildItem('*.code-workspace')).ToString())",";",
+        "&","$((Get-ChildItem('*.code-workspace')).ToString())"
       ]
     },
     {
       "label": "Start VisualStudio-Project",
       "type": "shell",
-      "options": {"cwd": "${fileDirname}\\.."},
+      "options": {"cwd": "${fileDirname}"},
       "group": "build",
       "presentation": {
         "group": "Task",
@@ -195,10 +190,8 @@
       },
       "command": "",
       "args": [
-        "Write-Host","Start VisualStudio-Project",";",
-        "Write-Host","  Time:","$(Get-Date","-Format","'yyyy/MM/dd(K)HH:mm:ss.ffff')",";",
-        "Write-Host","  VisualStudio-Project: $((Get-ChildItem *.sln).ToString())\n",";",
-        "pwsh","-Command","\"$((Get-ChildItem *.sln).ToString())\""
+        "&","Task-Infomation","Key-Value","Open VisualStudio-Project","Open the Project using VisualStudio.","Project","$((Get-ChildItem('./../*.sln')).ToString())",";",
+        "&","$((Get-ChildItem('./../*.sln')).ToString())"
       ]
     },
     {
@@ -480,7 +473,7 @@
       },
       "command": "",
       "args": [
-        "&","Task-Infomation","Expand C++ With GNU-G++",";",
+        "&","Task-Infomation","Infomation","Expand C++ With GNU-G++",";",
         "&","GNU-G++","Preprocess","'${fileBasenameNoExtension}'","${fileDirname}",";"
       ]
     },
@@ -504,7 +497,7 @@
       },
       "command": "",
       "args": [
-        "&","Task-Infomation","Compile C++ With GNU-G++",";",
+        "&","Task-Infomation","Infomation","Compile C++ With GNU-G++",";",
         "&","GNU-G++","Compile","'${fileBasenameNoExtension}'","${fileDirname}",";"
       ]
     },
@@ -528,7 +521,7 @@
       },
       "command": "",
       "args": [
-        "&","Task-Infomation","Compile C++ With GNU-G++",";",
+        "&","Task-Infomation","Infomation","Compile C++ With GNU-G++",";",
         "&","GNU-G++","Test","'${fileBasenameNoExtension}'","${fileDirname}",";"
       ]
     },
@@ -552,7 +545,7 @@
       },
       "command": "",
       "args": [
-        "&","Task-Infomation","Compile C++ With GNU-G++",";",
+        "&","Task-Infomation","Infomation","Compile C++ With GNU-G++",";",
         "&","GNU-G++","Test-Flush","'${fileBasenameNoExtension}'","${fileDirname}",";"
       ]
     },
