@@ -106,8 +106,8 @@
       },
       "command": "",
       "args": [
-        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\Task-Infomation.ps1","Open File","Open the file using your computer`s default software.",";",
-        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\File-Open.ps1","'${file}'",";"
+        "&","Task-Infomation","Open File","Open the file using your computer`s default software.",";",
+        "&","File-Open","'${file}'",";"
       ]
     },
     {
@@ -127,8 +127,8 @@
       },
       "command": "",
       "args": [
-        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\Task-Infomation.ps1","Open File","Open the file using your computer`s default software.",";",
-        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\Start-Anaconda-PowerShell.ps1",";"
+        "&","Task-Infomation","Open File","Open the file using your computer`s default software.",";",
+        "&","Start-Anaconda-PowerShell",";"
       ]
     },
     {
@@ -148,7 +148,7 @@
       },
       "command": "",
       "args": [
-        // "D:\\Studio\\Programming\\Project\\Script\\Task\\Task-Infomation.ps1.ps1",";",
+        // "Task-Infomation",";",
         "Write-Host","Start VisualStudioCode-FolderDirectory",";",
         "Write-Host","  Time:","$(Get-Date","-Format","'yyyy/MM/dd(K)HH:mm:ss.ffff')",";",
         "Write-Host","  VisualStudioCode-FolderDirectory: ${fileDirname}",";",
@@ -480,8 +480,8 @@
       },
       "command": "",
       "args": [
-        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\Task-Infomation.ps1","Expand C++ With GNU-G++",";",
-        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\GNU-G++.ps1","Preprocess","'${fileBasenameNoExtension}'","${fileDirname}",";"
+        "&","Task-Infomation","Expand C++ With GNU-G++",";",
+        "&","GNU-G++","Preprocess","'${fileBasenameNoExtension}'","${fileDirname}",";"
       ]
     },
     {
@@ -504,8 +504,8 @@
       },
       "command": "",
       "args": [
-        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\Task-Infomation.ps1","Compile C++ With GNU-G++",";",
-        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\GNU-G++.ps1","Compile","'${fileBasenameNoExtension}'","${fileDirname}",";"
+        "&","Task-Infomation","Compile C++ With GNU-G++",";",
+        "&","GNU-G++","Compile","'${fileBasenameNoExtension}'","${fileDirname}",";"
       ]
     },
     {
@@ -528,8 +528,8 @@
       },
       "command": "",
       "args": [
-        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\Task-Infomation.ps1","Compile C++ With GNU-G++",";",
-        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\GNU-G++.ps1","Test","'${fileBasenameNoExtension}'","${fileDirname}",";"
+        "&","Task-Infomation","Compile C++ With GNU-G++",";",
+        "&","GNU-G++","Test","'${fileBasenameNoExtension}'","${fileDirname}",";"
       ]
     },
     {
@@ -552,8 +552,8 @@
       },
       "command": "",
       "args": [
-        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\Task-Infomation.ps1","Compile C++ With GNU-G++",";",
-        "&","D:\\Studio\\Programming\\Project\\Script\\Task\\GNU-G++.ps1","Test-Flush","'${fileBasenameNoExtension}'","${fileDirname}",";"
+        "&","Task-Infomation","Compile C++ With GNU-G++",";",
+        "&","GNU-G++","Test-Flush","'${fileBasenameNoExtension}'","${fileDirname}",";"
       ]
     },
     {
