@@ -270,7 +270,7 @@
       ]
     },
     {
-      "label": "File: save as base64",
+      "label": "File: Base64 Encode",
       "type": "shell",
       "options": {"cwd": "${fileDirname}"},
       "group": "build",
@@ -286,11 +286,29 @@
       },
       "command": "",
       "args": [
-        "Write-Host","File: save as base64",";",
-        "Write-Host","  Time:","$(Get-Date","-Format","'yyyy/MM/dd(K)HH:mm:ss.ffff')",";",
-        "Write-Host","  File: ${file}",";",
-        "Write-Host","",";",
-        "[System.Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($(Get-Content","\"${file}\")))","|","Set-content","\"${file}.$(Get-Date","-Format","\"","${input:TimeFormat_Name}","\").b64\""
+        "&","Task-Infomation","Key-Value","Base64 encode","encode to Base64.","File","${file}",";",
+        "&","Coder-Base64","Encode-File","${file}",";",
+      ]
+    },
+    {
+      "label": "File: Base64 Decode",
+      "type": "shell",
+      "options": {"cwd": "${fileDirname}"},
+      "group": "build",
+      "presentation": {
+        "group": "Task",
+        "panel": "shared",
+        "reveal": "always",
+        "revealProblems": "onProblem",
+        "echo": true,
+        "focus": true,
+        "clear": false,
+        "showReuseMessage": true
+      },
+      "command": "",
+      "args": [
+        "&","Task-Infomation","Key-Value","Base64 decode","decode fron Base64.","File","${file}",";",
+        "&","Coder-Base64","Decode-File","${file}",";",
       ]
     },
     {
@@ -315,6 +333,7 @@
         "Write-Host","  File: ${file}",";",
         "Write-Host","  TargetEncoding: ${input:TargetEncoding}",";",
         "Write-Host","",";",
+
         "Get-Content","-Encoding","${input:TargetEncoding}","\"${file}\""
       ]
     },
@@ -341,6 +360,7 @@
         "Write-Host","  SourceEncoding: ${input:SourceEncoding}",";",
         "Write-Host","  TargetEncoding: ${input:TargetEncoding}",";",
         "Write-Host","",";",
+
         "Get-Content","-Encoding","${input:SourceEncoding}","\"${file}\"","|","Set-Content","-Encoding","${input:SourceEncoding}","\"${file}.${input:SourceEncoding}\"",";",
         "Get-Content","-Encoding","${input:SourceEncoding}","\"${file}.${input:SourceEncoding}\"","|","Set-Content","-Encoding","${input:TargetEncoding}","\"${file}\"",";",
         "Remove-Item","\".\\${file}.${input:SourceEncoding}\""
@@ -370,6 +390,7 @@
         "Write-Host","  Status: ${input:Status}",";",
         "Write-Host","  Split: ${input:Split}",";",
         "Write-Host","",";",
+
         "Get-Content","\"${file}\"","|","Set-Content","\".\\${fileBasenameNoExtension}${input:Split}$(Get-Date","-Format","\"","${input:TimeFormat_Name}","\")${input:Split}${input:VersionNumber}${input:Split}${input:Status}${fileExtname}\"",";"
       ]
     },
@@ -396,6 +417,7 @@
         "Write-Host","  Version: ${input:VersionNumber}",";",
         "Write-Host","  Split: ${input:Split}",";",
         "Write-Host","",";",
+
         "Write-Host","\".\\${fileBasenameNoExtension}${input:Split}$(Get-Date","-Format","\"","${input:TimeFormat_Name}","\")${input:Split}${input:VersionNumber}${fileExtname}\"",";",
         "Get-Content","\"${file}\"","|","Set-Content","\".\\${fileBasenameNoExtension}${input:Split}$(Get-Date","-Format","\"","${input:TimeFormat_Name}","\")${input:Split}${input:VersionNumber}${fileExtname}\"",";"
       ]
