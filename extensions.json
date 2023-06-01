@@ -12,6 +12,7 @@
           "spmeesseman.vscode-taskexplorer", 
         // Project
           "alefragnani.project-manager", 
+          "SonarSource.sonarlint-vscode", 
       // Tools
         // Translation
           "caiqichang.vscode-translation", 
@@ -19,6 +20,9 @@
           "benshabatnoam.google-translate-ext",
           "funkyremi.vscode-google-translate",
           "intellsmi.comment-translate",
+          "XiaodiYan.translator-helper",
+        // Git
+          "felipecaputo.git-project-manager",
         // GitHub
           "GitHub.vscode-pull-request-github",
           "GitHub.codespaces", 
@@ -40,9 +44,14 @@
             "ms-vscode-remote.remote-wsl",
             "ms-vscode-remote.remote-wsl-recommender", 
         // Containers
+          // Docker
+            "ms-azuretools.vscode-docker",
+          // Kubernetes
+            "ms-kubernetes-tools.vscode-kubernetes-tools",
           // Azure
             "ms-vscode.vscode-node-azure-pack", 
             "ms-vscode.azure-account",
+            "ms-vscode.azure-repos",
             "ms-azuretools.vscode-azureappservice",
             "ms-azuretools.vscode-azureresourcegroups",
             "ms-azuretools.vscode-docker",
@@ -54,7 +63,10 @@
           "rangav.vscode-thunder-client",
         // Code Screenshots
           "JeffersonLicet.snipped", 
-          "pnp.polacode", 
+          "adpyke.codesnap",
+          // "pnp.polacode", 
+        // Hex
+          "ms-vscode.hexeditor", 
         // pdf-Reader
           "tomoki1207.pdf",
         // Renderer
