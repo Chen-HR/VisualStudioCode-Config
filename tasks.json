@@ -118,7 +118,7 @@
       },
       "command": "",
       "args": [
-        "&","Task-Infomation","Infomation","Open File","Open the file using your computer`s default software.",";",
+        "&","Task-Information","Information","Open File","Open the file using your computer`s default software.",";",
         "&","File-Open","'${file}'",";"
       ]
     },
@@ -139,7 +139,7 @@
       },
       "command": "",
       "args": [
-        "&","Task-Infomation","Infomation","Open File","Open the file using your computer`s default software.",";",
+        "&","Task-Information","Information","Open File","Open the file using your computer`s default software.",";",
         "&","Start-Anaconda-PowerShell",";"
       ]
     },
@@ -160,7 +160,7 @@
       },
       "command": "",
       "args": [
-        "&","Task-Infomation","Key-Value","Open VisualStudioCode-Directory","Open the Directory using VisualStudioCode.","Directory","${fileDirname}",";",
+        "&","Task-Information","Key-Value","Open VisualStudioCode-Directory","Open the Directory using VisualStudioCode.","Directory","${fileDirname}",";",
         "code","${fileDirname}"
       ]
     },
@@ -181,7 +181,7 @@
       },
       "command": "",
       "args": [
-        "&","Task-Infomation","Key-Value","Open VisualStudioCode-WorkSpace","Open the WorkSpace using VisualStudioCode.","WorkSpace","$((Get-ChildItem('*.code-workspace')).ToString())",";",
+        "&","Task-Information","Key-Value","Open VisualStudioCode-WorkSpace","Open the WorkSpace using VisualStudioCode.","WorkSpace","$((Get-ChildItem('*.code-workspace')).ToString())",";",
         "&","$((Get-ChildItem('*.code-workspace')).ToString())"
       ]
     },
@@ -202,7 +202,7 @@
       },
       "command": "",
       "args": [
-        "&","Task-Infomation","Key-Value","Open VisualStudio-Project","Open the Project using VisualStudio.","Project","$((Get-ChildItem('./../*.sln')).ToString())",";",
+        "&","Task-Information","Key-Value","Open VisualStudio-Project","Open the Project using VisualStudio.","Project","$((Get-ChildItem('./../*.sln')).ToString())",";",
         "&","$((Get-ChildItem('./../*.sln')).ToString())"
       ]
     },
@@ -223,7 +223,7 @@
       },
       "command": "",
       "args": [
-        "&","Task-Infomation","Key-Value","Clone VisualStudioCode-Config","Clone VisualStudioCode-Config from current config.","SourceFolder","${workspaceFolder}","TargetFolder","${fileDirname}",";",
+        "&","Task-Information","Key-Value","Clone VisualStudioCode-Config","Clone VisualStudioCode-Config from current config.","SourceFolder","${workspaceFolder}","TargetFolder","${fileDirname}",";",
         "&","VisualStudioCode-Config-Cloner","current","${fileDirname}","${workspaceFolder}"
       ]
     },
@@ -244,7 +244,7 @@
       },
       "command": "",
       "args": [
-        "&","Task-Infomation","Key-Value","Clone VisualStudioCode-Config","Clone VisualStudioCode-Config from Git Repository.","SourceFolder","${input:Git_Repository}","TargetFolder","${fileDirname}",";",
+        "&","Task-Information","Key-Value","Clone VisualStudioCode-Config","Clone VisualStudioCode-Config from Git Repository.","SourceFolder","${input:Git_Repository}","TargetFolder","${fileDirname}",";",
         "&","VisualStudioCode-Config-Cloner","git-clone","${fileDirname}","${input:Git_Repository}"
       ]
     },
@@ -265,7 +265,7 @@
       },
       "command": "",
       "args": [
-        "&","Task-Infomation","Key-Value","Clone VisualStudioCode-Config","Clone VisualStudioCode-Config from github.com/Chen-HR/VisualStudioCode-Config.","SourceFolder","https://github.com/Chen-HR/VisualStudioCode-Config","TargetFolder","${fileDirname}",";",
+        "&","Task-Information","Key-Value","Clone VisualStudioCode-Config","Clone VisualStudioCode-Config from github.com/Chen-HR/VisualStudioCode-Config.","SourceFolder","https://github.com/Chen-HR/VisualStudioCode-Config","TargetFolder","${fileDirname}",";",
         "&","VisualStudioCode-Config-Cloner","git-clone","${fileDirname}","https://github.com/Chen-HR/VisualStudioCode-Config"
       ]
     },
@@ -286,7 +286,7 @@
       },
       "command": "",
       "args": [
-        "&","Task-Infomation","Key-Value","Base64 encode","encode to Base64.","File","${file}",";",
+        "&","Task-Information","Key-Value","Base64 encode","encode to Base64.","File","${file}",";",
         "&","Coder-Base64","Encode-File","${file}",";",
       ]
     },
@@ -307,7 +307,7 @@
       },
       "command": "",
       "args": [
-        "&","Task-Infomation","Key-Value","Base64 decode","decode fron Base64.","File","${file}",";",
+        "&","Task-Information","Key-Value","Base64 decode","decode fron Base64.","File","${file}",";",
         "&","Coder-Base64","Decode-File","${file}",";",
       ]
     },
@@ -538,7 +538,7 @@
       },
       "command": "",
       "args": [
-        "&","Task-Infomation","Infomation","Expand C++ With GNU-G++",";",
+        "&","Task-Information","Information","Expand C++ With GNU-G++",";",
         "&","GNU-G++","Preprocess","'${fileBasenameNoExtension}'","${fileDirname}",";"
       ]
     },
@@ -562,7 +562,7 @@
       },
       "command": "",
       "args": [
-        "&","Task-Infomation","Infomation","Compile C++ With GNU-G++",";",
+        "&","Task-Information","Information","Compile C++ With GNU-G++",";",
         "&","GNU-G++","Compile","'${fileBasenameNoExtension}'","${fileDirname}",";"
       ]
     },
@@ -586,7 +586,7 @@
       },
       "command": "",
       "args": [
-        "&","Task-Infomation","Infomation","Compile C++ With GNU-G++",";",
+        "&","Task-Information","Information","Compile C++ With GNU-G++",";",
         "&","GNU-G++","Test","'${fileBasenameNoExtension}'","${fileDirname}",";"
       ]
     },
@@ -610,7 +610,7 @@
       },
       "command": "",
       "args": [
-        "&","Task-Infomation","Infomation","Compile C++ With GNU-G++",";",
+        "&","Task-Information","Information","Compile C++ With GNU-G++",";",
         "&","GNU-G++","Test-Flush","'${fileBasenameNoExtension}'","${fileDirname}",";"
       ]
     },
