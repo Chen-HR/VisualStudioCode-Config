@@ -519,7 +519,7 @@
       ]
     },
     {
-      "label": "Expand C++ With GNU-G++",
+      "label": "Expand C++ With CCppTool",
       "type": "shell",
       "dependsOn": [""],
       "dependsOrder": "sequence",
@@ -538,12 +538,12 @@
       },
       "command": "",
       "args": [
-        "&","Task-Information","Information","Expand C++ With GNU-G++",";",
-        "&","GNU-G++","Preprocess","'${fileBasenameNoExtension}'","${fileDirname}",";"
+        "&","Task-Information","Information","Expand C++ With CCppTool",";",
+        "&","CCppTool","Preprocess","'${fileBasenameNoExtension}'","${fileDirname}",";"
       ]
     },
     {
-      "label": "Compile C++ With GNU-G++",
+      "label": "Compile C++ With CCppTool",
       "type": "shell",
       "dependsOn": [""],
       "dependsOrder": "sequence",
@@ -562,12 +562,12 @@
       },
       "command": "",
       "args": [
-        "&","Task-Information","Information","Compile C++ With GNU-G++",";",
-        "&","GNU-G++","Compile","'${fileBasenameNoExtension}'","${fileDirname}",";"
+        "&","Task-Information","Information","Compile C++ With CCppTool",";",
+        "&","CCppTool","Compile","'${fileBasenameNoExtension}'","${fileDirname}",";"
       ]
     },
     {
-      "label": "Test C++ With GNU-G++",
+      "label": "Test C++ With CCppTool",
       "type": "shell",
       "dependsOn": [""],
       "dependsOrder": "sequence",
@@ -586,12 +586,12 @@
       },
       "command": "",
       "args": [
-        "&","Task-Information","Information","Compile C++ With GNU-G++",";",
-        "&","GNU-G++","Test","'${fileBasenameNoExtension}'","${fileDirname}",";"
+        "&","Task-Information","Information","Compile C++ With CCppTool",";",
+        "&","CCppTool","Test","'${fileBasenameNoExtension}'","${fileDirname}",";"
       ]
     },
     {
-      "label": "Test C++ With GNU-G++ (Flush)",
+      "label": "Test C++ With CCppTool (Flush)",
       "type": "shell",
       "dependsOn": [""],
       "dependsOrder": "sequence",
@@ -610,8 +610,8 @@
       },
       "command": "",
       "args": [
-        "&","Task-Information","Information","Compile C++ With GNU-G++",";",
-        "&","GNU-G++","Test-Flush","'${fileBasenameNoExtension}'","${fileDirname}",";"
+        "&","Task-Information","Information","Compile C++ With CCppTool",";",
+        "&","CCppTool","Test-Flush","'${fileBasenameNoExtension}'","${fileDirname}",";"
       ]
     },
     {
